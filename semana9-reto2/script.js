@@ -32,7 +32,7 @@ function iniciarjuegoDados(){
             apuesta = parseInt(prompt("Ingresa un valor de apuesta valido: "));
         }while(apuesta > dineroActual)
 
-        valorDado = lazarDado();
+        valorDado = lanzarDado();
 
         if(prediccion == valorDado){
             dineroActual += (apuesta*2);
@@ -51,7 +51,7 @@ function iniciarjuegoDados(){
     console.log("--------------------------------------");
 }
 
-function lazarDado(){
+function lanzarDado(){
     return getRndInteger(1, 6);
 }
 
