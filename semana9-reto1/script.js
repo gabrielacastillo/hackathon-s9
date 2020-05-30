@@ -1,3 +1,7 @@
+/**
+ * Desarrollar una aplicacion para codificar y descodificar texto. 
+ */
+
 //console.log(text.charAt(i));
 //console.log(text.charCodeAt(i));
 // String.fromCharCode(e.keyCode);
