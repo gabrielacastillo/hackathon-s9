@@ -1,12 +1,14 @@
-function encode(text){
+//console.log(text.charAt(i));
+//console.log(text.charCodeAt(i));
+// String.fromCharCode(e.keyCode);
+
+function encode(text, type_encode){
     text = text.toLowerCase();
     let charCode;
     let newCharCode;
     let result = "";
 
     for(i=0; i<text.length; i++){
-        //console.log(text.charAt(i));
-        //console.log(text.charCodeAt(i));
 
         charCode = text.charCodeAt(i);
         
@@ -19,7 +21,7 @@ function encode(text){
         }else if(charCode == 32){ //space
             newCharCode = 32;
         }else{
-            newCharCode = charCode + 3;
+            newCharCode = charCode + type_encode;
         }
 
         result += String.fromCharCode(newCharCode);
@@ -28,10 +30,34 @@ function encode(text){
     console.log(result);
 }
 
-function decode(text){
+function decode(text, type_encode){
     text = text.toLowerCase();
-    // var res = str.charAt(0);
-    // String.fromCharCode(e.keyCode);
+    let charCode;
+    let newCharCode;
+    let result = "";
+
+    for(i=0; i<text.length; i++){
+
+        charCode = text.charCodeAt(i);
+        
+        if(charCode == 97){ // x
+            newCharCode = 120;
+        }else if(charCode == 98){ // y
+            newCharCode = 121;
+        }else if(charCode == 99){ // z
+            newCharCode = 122;
+        }else if(charCode == 32){ //space
+            newCharCode = 32;
+        }else{
+            newCharCode = charCode - type_encode;
+        }
+
+        result += String.fromCharCode(newCharCode);
+    }
+
+    console.log(result);
 }
 
-encode("abc def xyz");
+encode("abc def xyz", 3);
+
+decode("def ghi abc", 3);
