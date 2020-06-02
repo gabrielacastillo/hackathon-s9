@@ -14,7 +14,7 @@ El juego acaba cuando el usuario llega a 0 soles o a llegar a 200 soles.
 let dineroActual = 5;
 
 function iniciarjuegoDados(){
-    console.log("bienvenido a Gabriela's Game :D");
+    console.log("bienvenido a Gabriela's Game :-D");
     console.log("-------------------------------");
 
     console.log("Tienes 5 Soles de dinero inicial buena suerte...");
